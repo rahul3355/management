@@ -1,0 +1,34 @@
+<div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Book List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings | async">
+            <td>{{booking.firstName}}</td>
+            <td>{{booking.lastName}}</td>
+            <td>{{booking.emailId}}</td>
+            <td>{{booking.phone}}</td>
+            
+            
+            <td><button (click)="deleteBooking(booking.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateBooking(booking.id)" class="btn btn-info" style="margin-left: 10px">Update Book Details</button>
+                <button (click)="bookingDetails(booking.id)" class="btn btn-info" style="margin-left: 10px">Book Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+</div>

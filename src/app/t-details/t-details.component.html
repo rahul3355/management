@@ -1,0 +1,28 @@
+<h2>Book Details</h2> 
+
+<hr/>
+<div *ngIf="booking">
+  <div>
+    <label><b>Book Name: </b></label> {{booking.firstName}}
+  </div>
+  <div>
+    <label><b>Genre: </b></label> {{booking.lastName}}
+  </div>
+  <div>
+    <label><b>Author: </b></label> {{booking.emailId}}
+  </div>  
+  <div>
+    <label><b>Status: </b></label> {{booking.phone}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{booking.address}}
+  </div>
+  <div>
+    <label><b>Publication: </b></label> {{booking.source}}
+  </div>
+  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to List of books</button><br>
